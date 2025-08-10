@@ -1,17 +1,17 @@
-FLAGS = -Wall -Wextra
+FLAGS = -Wall -Wextra -Wimplicit
 COMPILER = cc
 
-SOURCE = bsLex.c
-OBJECT = bsLex.o
+SOURCE = bsbl.c hello.c
+OBJECT = bsbl.o hello.o
 OUTPUT = bs-blc
 
 %.o: src/%.c
 	$(COMPILER) -o $@ -c $(FLAGS) $<
 
 
-make: $(OBJECT)
-	$(COMPILER) -o $(OUTPUT) $<
-
+make: 
+	$(COMPILER) -o $(OUTPUT) $(OBJECT)  
+    
 .PHONY: clean
 clean:
 	rm -rf *.o
