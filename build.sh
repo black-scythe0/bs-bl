@@ -10,9 +10,9 @@ exe_name='bs-blc'
 set -xe
 make 
 
-if [ $1 == '-Termux-run' ]; 
-then
+#if [ $1 == '-Termux-run' ]; 
+#then
     mv ${exe_name} ~/exes
     chmod +x ~/exes/${exe_name}
-    ~/exes/${exe_name};
-fi
+    ~/exes/${exe_name} $1;
+#fi
