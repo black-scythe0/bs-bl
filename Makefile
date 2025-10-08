@@ -1,8 +1,8 @@
 FLAGS = -Wall -Wextra -Wimplicit
 COMPILER = cc
 
-SOURCE = bsbl.c hello.c
-OBJECT = bsbl.o hello.o
+SOURCE = bsbl.c 
+OBJECT = bsbl.o
 OUTPUT = bs-blc
 
 %.o: src/%.c
